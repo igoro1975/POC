@@ -12,9 +12,17 @@ namespace POC.Controllers
     public class TesterController : ControllerBase
     {
         [HttpGet]
+        [Route("")]
         public string Get()
         {
             return "Hello world!";
+        }
+
+        [HttpGet]
+        [Route("{name}")]
+        public string Get(string name)
+        {
+            return $"Hello {name}!!!";
         }
     }
 }
